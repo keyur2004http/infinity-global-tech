@@ -62,15 +62,15 @@ export default function ContactForm() {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <FiMail className="text-xl text-gray-400" />
-              <span>support@infinityglobaltech.com</span>
+              <span>info.infinityglobaltech@gmail.com</span>
             </div>
             <div className="flex items-center gap-3">
               <FiPhone className="text-xl text-gray-400" />
-              <span>+91 98765 43210</span>
+              <span>+91 6352540917</span>
             </div>
             <div className="flex items-start gap-3">
               <FiMapPin className="text-xl text-gray-400 mt-1" />
-              <span></span>
+              <span>208,New shakti vijay soc , hirabag , varachha road , surat</span>
             </div>
           </div>
         </div>
