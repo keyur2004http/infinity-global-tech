@@ -4,10 +4,10 @@ import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
 
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-gray-200 py-10">
+    <footer className="bg-gray-900 border-t border-gray-200 py-10">
       <div className="max-w-6xl mx-auto px-6 flex flex-col items-center space-y-4">
         {/* Logo */}
-        <div className="w-24 h-24 flex items-center justify-center rounded-full overflow-hidden bg-gray-100 shadow">
+        <div className="w-24 h-24 flex items-center justify-center rounded-full overflow-hidden shadow-lg">
           <img
             src="/Assets/global.png"  // replace with your logo path
             alt="Infinity Global Tech"
@@ -15,7 +15,7 @@ export default function Footer() {
           />
         </div>
         {/* Subtitle */}
-        <p className="text-base font-medium text-gray-700 text-center">
+        <p className="text-base font-medium text-white text-center">
           Infinity Global Tech
         </p>
       
@@ -23,7 +23,7 @@ export default function Footer() {
 
 
       {/* Navigation Links */}
-      <nav className="flex space-x-6 text-sm font-medium text-gray-700">
+      <nav className="flex space-x-6 text-sm font-medium text-white">
         <a href="/" className="hover:text-black">Home</a>
         <a href="/about" className="hover:text-black">About</a>
         <a href="/services" className="hover:text-black">Services</a>
@@ -46,7 +46,7 @@ export default function Footer() {
           <Linkedin size={18} />
         </a>
       </div>
-      <p className="text-sm text-gray-600 text-center">
+      <p className="text-sm text-white text-center">
         We are a passionate team of digital marketers and developers dedicated to crafting impactful <br />
         online presences that drive growth and connect with your audience. <br />
       </p>

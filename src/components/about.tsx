@@ -23,6 +23,7 @@ import {
 import { motion, useScroll, useTransform, useInView, useSpring, Variants } from "framer-motion"
 import { HeroNavBar } from "./navbar "
 import Footer from "./footer";
+import { TestimonialCarousel } from "./profile-card-testimonial-carousel";
 
 export default function AboutUsSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -354,8 +355,11 @@ export default function AboutUsSection() {
           </Link>
         </motion.div>
       </motion.div>
+      <TestimonialCarousel/>
     </section>
+    
     <Footer/>
+    
     </>
   )
 }

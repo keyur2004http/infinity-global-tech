@@ -17,49 +17,49 @@ export function ServiceSection() {
       title: "Email Marketing",
       description:
         "Engage your audience with personalized and automated email campaigns that drive conversions.",
-      icon: <MailIcon className="w-8 h-8 text-primary" />,
+      icon: <img src="/Assets/icones/email-file.gif" alt="Email Marketing" className="w-18 h-18" />,
     },
     {
       title: "Social Media Marketing",
       description:
         "Boost your brand presence across platforms with data-driven campaigns and content strategies.",
-      icon: <MegaphoneIcon className="w-8 h-8 text-primary" />,
+      icon: <img src="/Assets/icones/social-marketing.gif" alt="Social Media Marketing" className="w-18 h-18" />,
     },
     {
       title: "SEO & PPC",
       description:
         "Improve visibility, rank higher on search engines, and maximize ROI with targeted paid ads.",
-      icon: <SearchIcon className="w-8 h-8 text-primary" />,
+      icon: <img src="/Assets/icones/search.gif" alt="SEO & PPC" className="w-18 h-18" />,
     },
     {
       title: "Content Marketing",
       description:
         "Build trust and authority with engaging blogs, copywriting, and storytelling tailored to your brand.",
-      icon: <PenToolIcon className="w-8 h-8 text-primary" />,
+      icon: <img src="/Assets/icones/content.gif" alt="Content Marketing" className="w-18 h-18" />,
     },
     {
       title: "Global Reach",
       description:
         "Expand internationally with multilingual campaigns and strategies tailored for diverse audiences.",
-      icon: <GlobeIcon className="w-8 h-8 text-primary" />,
+      icon: <img src="/Assets/icones/global.gif" alt="Global Reach" className="w-18 h-18" />,
     },
     {
       title: "Analytics & Reporting",
       description:
         "Track campaigns in real-time with actionable insights and ROI-driven performance reports.",
-      icon: <BarChartIcon className="w-8 h-8 text-primary" />,
+      icon: <img src="/Assets/icones/financial-analysis.gif" alt="Analytics & Reporting" className="w-18 h-18" />,
     },
     {
       title: "Lead Generation",
       description:
         "Convert prospects into customers with funnels, landing pages, and high-performing ad strategies.",
-      icon: <UsersIcon className="w-8 h-8 text-primary" />,
+      icon: <img src="/Assets/icones/leads.gif" alt="Lead Generation" className="w-18 h-18" />,
     },
     {
       title: "Video Marketing",
       description:
         "Engage your audience with compelling video content, ads, and storytelling campaigns.",
-      icon: <MonitorPlayIcon className="w-8 h-8 text-primary" />,
+      icon: <img src="/Assets/icones/instagram-post.gif" alt="Video Marketing" className="w-18 h-18" />,
     },
   ];
 
@@ -76,7 +76,7 @@ export function ServiceSection() {
   </div>
 
   {/* Features Grid */}
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10 py-10 max-w-7xl mx-auto cursor-pointer">
+  <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10 py-10 max-w-7xl mx-auto cursor-pointer">
     {features.map((feature, index) => (
       <Feature key={feature.title} {...feature} index={index} />
     ))}

@@ -5,6 +5,7 @@ import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
 import { HeroNavBar } from "./navbar ";
 import Footer from "./footer";
 
+
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
@@ -50,12 +51,12 @@ export default function ContactForm() {
     <>
     <HeroNavBar/>
     <section className="min-h-screen  flex items-center justify-center py-2 lg:mt-10 lg:py-26  ">
-      <div className="max-w-6xl w-full bg-white shadow-lg rounded-lg   overflow-hidden grid grid-cols-1 lg:grid-cols-2 border border-gray-200">
+      <div className="max-w-6xl w-full shadow-lg rounded-lg   overflow-hidden grid grid-cols-1 lg:grid-cols-2 border border-gray-200">
         {/* Left Side - Info */}
         
-        <div className=" text-gray-700 p-10 flex flex-col justify-center">
+        <div className=" text-white p-10 flex flex-col justify-center bg-gray-900">
           <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
-          <p className="mb-8 text-gray-500">
+          <p className="mb-8 text-gray-400">
             Have questions? We’d love to hear from you. Fill out the form and we’ll get back to you soon.
           </p>
 
@@ -147,6 +148,7 @@ export default function ContactForm() {
           </form>
         </div>
       </div>
+      
     </section>
     <Footer></Footer>
     </>

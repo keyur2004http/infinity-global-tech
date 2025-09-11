@@ -69,7 +69,7 @@ export const ContainerScroll: React.FC<
     <ContainerScrollContext.Provider value={{ scrollYProgress }}>
       <div
         ref={scrollRef}
-        className={cn("relative min-h-svh w-full", className)}
+        className={cn("relative min-h-svh w-full ", className)}
         style={{ perspective: "1000px", ...style }}
         {...props}
       >
@@ -173,7 +173,7 @@ export const ReviewStars = React.forwardRef<HTMLDivElement, ReviewProps>(
 
     return (
       <div
-        className={cn("flex items-center gap-2", className)}
+        className={cn("flex items-center gap-2 ", className)}
         ref={ref}
         {...props}
       >

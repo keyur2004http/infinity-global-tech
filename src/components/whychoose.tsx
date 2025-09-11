@@ -18,39 +18,34 @@ interface Feature {
 
 const features: Feature[] = [
   {
-    icon: <FiHeadphones className="size-6" />,
+    icon: <img src="/Assets/icones/helpdesk.gif" alt="24/7 Support" className="w-20 h-18" />,
     title: "24/7 Lifetime Support",
     description: "Our team is always available to assist you, anytime you need.",
   },
   {
-    icon: <FiClock className="size-6" />,
+    icon: <img src="/Assets/icones/speedometer.gif" alt="On-Time Delivery" className="w-20 h-18" />,
     title: "On-Time Delivery",
     description: "We value your time and ensure timely execution of campaigns.",
   },
   {
-    icon: <FiShield className="size-6" />,
-    title: "Trusted & Secure",
-    description: "Your business data and campaigns are safe with our secure systems.",
-  },
-  {
-    icon: <FiDollarSign className="size-6" />,
+    icon: <img src="/Assets/icones/best-price.gif" alt="Affordable Pricing" className="w-20 h-18" />,
     title: "Affordable Pricing",
     description: "Get premium digital marketing services that fit your budget.",
   },
- 
   {
-    icon: <FiThumbsUp className="size-6" />,
+    icon: <img src="/Assets/icones/feedback.gif" alt="Client Satisfaction" className="w-20 h-18" />,
     title: "Client Satisfaction",
     description: "We build long-term partnerships with 100% client satisfaction.",
   },
 ];
+
 
 export function WhychooseUS() {
   return (
     <section className="w-full bg-background py-20">
       <div className="text-center mb-12">
         <motion.h2
-          className="text-3xl font-extrabold tracking-tight sm:text-3xl"
+          className="text-3xl text-gray-700 font-extrabold tracking-tight sm:text-3xl"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -67,32 +62,33 @@ export function WhychooseUS() {
         </motion.p>
       </div>
 
-      <div className="relative flex flex-col md:flex-row md:justify-center">
-        {features.map((feature, index) => (
-          <motion.div
-            key={index}
-            className="relative flex flex-1 flex-col items-center px-8 py-6"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
-          >
-            <div className="mb-6 flex size-16 items-center justify-center rounded-full bg-primary/10 shadow-lg">
-              {feature.icon}
-            </div>
-            <h3 className="mb-3 text-xl font-semibold">{feature.title}</h3>
-            <p className="text-base text-muted-foreground text-center max-w-xs">
-              {feature.description}
-            </p>
-
-            {index < features.length - 1 && (
-              <Separator
-                orientation="vertical"
-                className="hidden md:block absolute right-0 top-12 h-[180px] w-[2px] bg-gradient-to-b from-primary/40 via-transparent to-primary/40"
-              />
-            )}
-          </motion.div>
-        ))}
+      <div className="relative grid sm:grid-cols-4 grid-cols-2 gap-2 sm:gap-2 md:gap-2 justify-center">
+  {features.map((feature, index) => (
+    <motion.div
+      key={index}
+      className="relative flex flex-col items-center px-4 py-6 text-center"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: index * 0.2 }}
+    >
+      {/* Icon */}
+      <div className="mb-4 flex size-14 sm:size-16 items-center justify-center rounded-full  shadow-lg">
+        {feature.icon}
       </div>
+
+      {/* Title */}
+      <h3 className="mb-2 text-sm sm:text-base md:text-lg font-semibold">
+        {feature.title}
+      </h3>
+      <Separator orientation="vertical" className="hidden md:block absolute right-0 top-12 h-[180px] w-[2px] bg-gradient-to-b from-primary/40 via-transparent to-primary/40"></Separator>
+      {/* Description */}
+      <p className="text-xs sm:text-sm md:text-base text-muted-foreground max-w-[220px] sm:max-w-xs">
+        {feature.description}
+      </p>
+    </motion.div>
+  ))}
+</div>
+
     </section>
   );
 }
