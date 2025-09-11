@@ -53,7 +53,7 @@ export function HeroSection() {
              
 
               <motion.h1
-                className="mt-10 text-balance text-4xl font-bold md:text-5xl xl:text-6xl"
+                className="mt-10 text-balance text-4xl font-bold md:text-5xl xl:text-6xl "
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -62,7 +62,7 @@ export function HeroSection() {
               </motion.h1>
 
               <motion.p
-                className="mt-8 text-lg text-muted-foreground "
+                className="mt-50 sm:mt-8 text-lg text-muted-foreground "
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -117,8 +117,8 @@ export function HeroSection() {
             </motion.div>
 
             {/* Right Content (Image) */}
-            <div className="absolute inset-0 -mx-4 rounded-3xl p-3 lg:col-span-3 sm:mt-10  mt-30">
-              <div aria-hidden className="absolute z-[1] inset-0 bg-gradient-to-r from-background from-35% " />
+            <div className="absolute inset-0 -mx-4 rounded-3xl p-3 lg:col-span-3 sm:mt-10  mt-30 ">
+              <div aria-hidden className="absolute z-[1] inset-0 sm:bg-gradient-to-r from-background from-35% " />
               <div className="relative">
 
                 <Image
