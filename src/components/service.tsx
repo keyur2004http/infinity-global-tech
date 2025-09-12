@@ -17,7 +17,7 @@ export function ServiceSection() {
       title: "Email Marketing",
       description:
         "Engage your audience with personalized and automated email campaigns that drive conversions.",
-      icon: <img src="/Assets/icones/email-file.gif" alt="Email Marketing" className="w-18 h-18" />,
+      icon: <img src="/Assets/icones/email.gif" alt="Email Marketing" className="w-18 h-18" />,
     },
     {
       title: "Social Media Marketing",
@@ -76,7 +76,7 @@ export function ServiceSection() {
   </div>
 
   {/* Features Grid */}
-  <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10 py-10 max-w-7xl mx-auto cursor-pointer">
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10 py-10 max-w-7xl mx-auto cursor-pointer">
     {features.map((feature, index) => (
       <Feature key={feature.title} {...feature} index={index} />
     ))}

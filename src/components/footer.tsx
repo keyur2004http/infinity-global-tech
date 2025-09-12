@@ -1,6 +1,6 @@
 "use client"
 
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
+import { Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -18,31 +18,26 @@ export default function Footer() {
         <p className="text-base font-medium text-white text-center">
           Infinity Global Tech
         </p>
-      
-
-
-
       {/* Navigation Links */}
       <nav className="flex space-x-6 text-sm font-medium text-white">
         <a href="/" className="hover:text-black">Home</a>
         <a href="/about" className="hover:text-black">About</a>
-        <a href="/services" className="hover:text-black">Services</a>
         <a href="/#portfolio" className="hover:text-black">Products</a>
         <a href="/contact" className="hover:text-black">Contact</a>
       </nav>
 
       {/* Social Icons */}
       <div className="flex space-x-4">
-        <a href="#" className="p-2 rounded-full bg-gray-100 hover:bg-gray-200">
+        <a href="https://www.facebook.com/share/15gsubb944/?mibextid=qi2Omg" className="p-2 rounded-full bg-gray-100 hover:bg-gray-200">
           <Facebook size={18} />
         </a>
-        <a href="#" className="p-2 rounded-full bg-gray-100 hover:bg-gray-200">
-          <Twitter size={18} />
+        <a href="https://youtube.com/@infinityglobaltech?si=w8SBRFIqylyQGUje" className="p-2 rounded-full bg-gray-100 hover:bg-gray-200">
+          <Youtube size={18} />
         </a>
-        <a href="#" className="p-2 rounded-full bg-gray-100 hover:bg-gray-200">
+        <a href="https://www.instagram.com/infinityglobaltech_official?igsh=NnZtODlxaThsbWZ2" className="p-2 rounded-full bg-gray-100 hover:bg-gray-200">
           <Instagram size={18} />
         </a>
-        <a href="#" className="p-2 rounded-full bg-gray-100 hover:bg-gray-200">
+        <a href="https://www.linkedin.com/in/infinity-global-tech-472318371/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="p-2 rounded-full bg-gray-100 hover:bg-gray-200">
           <Linkedin size={18} />
         </a>
       </div>

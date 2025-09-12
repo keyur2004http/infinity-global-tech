@@ -2,14 +2,6 @@
 
 import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
-import {
-  FiHeadphones,
-  FiClock,
-  FiShield,
-  FiDollarSign,
-  FiThumbsUp,
-} from "react-icons/fi";
-
 interface Feature {
   icon: React.ReactNode;
   title: string;

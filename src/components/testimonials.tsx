@@ -95,8 +95,7 @@ export function TestimonialsVariant() {
           Testimonials
         </h3>
         <p className="mx-auto mt-2 max-w-xl text-center text-sm md:text-base">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-          consequatur reprehenderit.
+          Client Review that our trust.
         </p>
       </div>
 

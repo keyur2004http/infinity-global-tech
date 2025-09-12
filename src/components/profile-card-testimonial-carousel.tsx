@@ -8,6 +8,7 @@ import {
   Twitter,
   Youtube,
   Linkedin,
+  Facebook,
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
@@ -29,19 +30,19 @@ const testimonials: Testimonial[] = [
     name: "Satyam Lathiya",
     title: "Founder, Infinity Global Tech",
     description:
-      "Working with this team completely changed our infrastructure game. The support and expertise were incredible. They delivered beyond our expectations and helped us scale to millions of users.",
+      "Built Infinity Global Tech as a virtual-first agency, driven by innovation and client growth.",
     imageUrl:
       "/Assets/st-lathiya.png",
-    githubUrl: "#",
-    twitterUrl: "#",
+    githubUrl: "https://www.facebook.com/share/16LFG7iTHj/",
+    twitterUrl: "https://x.com/LathiyaSatyam?t=J_S4p3PdHbNvOzxMYmik6A&s=09",
     youtubeUrl: "#",
-    linkedinUrl: "#",
+    linkedinUrl: "https://www.linkedin.com/in/satyam-lathiya-ba7960264?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
-    name: "Keyur",
+    name: "Keyur Kidecha",
     title: "Co-Founder,Infinity Global",
     description:
-      "The data analytics platform they built gave our team the confidence and tools needed for true data-driven decisions. Their dashboarding capabilities went above and beyond our expectations.",
+      "Passionate about digital strategies, shaping a global team without physical limits.3",
     imageUrl:
       "",
     githubUrl: "#",
@@ -67,7 +68,7 @@ export function TestimonialCarousel({ className }: TestimonialCarouselProps) {
   const currentTestimonial = testimonials[currentIndex];
 
   const socialIcons = [
-    { icon: Github, url: currentTestimonial.githubUrl, label: "GitHub" },
+    { icon: Facebook, url: currentTestimonial.githubUrl, label: "Facebook" },
     { icon: Twitter, url: currentTestimonial.twitterUrl, label: "Twitter" },
     { icon: Youtube, url: currentTestimonial.youtubeUrl, label: "YouTube" },
     { icon: Linkedin, url: currentTestimonial.linkedinUrl, label: "LinkedIn" },
