@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
-import { HeroNavBar } from "./navbar ";
-import Footer from "./footer";
 
 
 export default function ContactForm() {
@@ -49,12 +47,15 @@ export default function ContactForm() {
 
   return (
     <>
-    <HeroNavBar/>
-    <section className="min-h-screen  flex items-center justify-center py-2 lg:mt-10 lg:py-26  ">
-      <div className="max-w-6xl w-full shadow-lg rounded-lg   overflow-hidden grid grid-cols-1 lg:grid-cols-2 border border-gray-200">
+   
+    <section id="contact-us"
+    className="min-h-screen  flex items-center justify-center py-10   bg-gradient-to-b from-white via-blue-400/10  to-blue-400/10 
+    md:bg-gradient-to-bl md:from-[#f5ecff] md:via-white md:to-white ">
+      
+      <div className="max-w-6xl w-full shadow-lg rounded-lg overflow-hidden grid grid-cols-1 lg:grid-cols-2 border border-gray-200 mt-30">
         {/* Left Side - Info */}
         
-        <div className=" text-white p-10 flex flex-col justify-center bg-gray-900">
+        <div className=" text-white p-10 flex flex-col justify-center bg-gradient-to-br from-cyan-950 via-cyan-900 to-cyan-800 ">
           <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
           <p className="mb-8 text-gray-400">
             Have questions? We’d love to hear from you. Fill out the form and we’ll get back to you soon.
@@ -77,7 +78,7 @@ export default function ContactForm() {
         </div>
        
         {/* Right Side - Form */}
-        <div className="5">
+        <div className="5  ">
           <form
             onSubmit={handleSubmit}
             className=" shadow-md rounded-lg p-6 w-full"
@@ -89,7 +90,7 @@ export default function ContactForm() {
                   type="text"
                   name="firstName"
                   required
-                  className="mt-1 w-full border rounded-md px-3 py-2"
+                  className="mt-1 w-full border rounded-md px-3 py-2 border-gray-200"
                 />
               </div>
               <div>
@@ -98,7 +99,7 @@ export default function ContactForm() {
                   type="text"
                   name="lastName"
                   required
-                  className="mt-1 w-full border rounded-md px-3 py-2"
+                  className="mt-1 w-full border rounded-md px-3 py-2 border-gray-200"
                 />
               </div>
             </div>
@@ -109,7 +110,7 @@ export default function ContactForm() {
                 type="email"
                 name="email"
                 required
-                className="mt-1 w-full border rounded-md px-3 py-2"
+                className="mt-1 w-full border rounded-md px-3 py-2 border-gray-200"
               />
             </div>
 
@@ -122,7 +123,7 @@ export default function ContactForm() {
                 name="phone"
                 placeholder="+91 9876543210"
                 required
-                className="mt-1 w-full border rounded-md px-3 py-2"
+                className="mt-1 w-full border rounded-md px-3 py-2 border-gray-200"
               />
             </div>
 
@@ -132,25 +133,23 @@ export default function ContactForm() {
                 name="message"
                 rows={4}
                 required
-                className="mt-1 w-full border rounded-md px-3 py-2"
+                className="mt-1 w-full border rounded-md px-3 py-2 border-gray-200"
               />
             </div>
 
             <button
               type="submit"
               disabled={loading}
-              className="mt-6 w-full bg-gray-900 text-white py-2 rounded-md hover:bg-gray-800 transition"
+              className="mt-6 w-full bg-cyan-900 text-white py-2 rounded-md hover:bg-gray-800 transition"
             >
               {loading ? "Sending..." : "Send Message"}
             </button>
-
             {message && <p className="mt-4 text-center">{message}</p>}
           </form>
         </div>
-      </div>
-      
+      </div>   
     </section>
-    <Footer></Footer>
+    
     </>
   );
 }

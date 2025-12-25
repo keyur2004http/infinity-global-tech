@@ -1,5 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @custom-variant dark (&:is(.dark *));
 
@@ -52,6 +55,17 @@
   --radius: var(----radius);
   --font-serif: var(----font-serif);
   --color-destructive-foreground: var(----destructive-foreground);
+  --animate-marquee: marquee var(--duration) linear infinite;
+  --color-brand-foreground: var(----brand-foreground);
+  --color-brand: var(----brand);
+  @keyframes marquee {
+  from {
+    transform: translateX(0);
+    }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
 }
 
 :root {
@@ -99,6 +113,8 @@
   --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 4px 6px -1px hsl(0 0% 0% / 0.10);
   --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 8px 10px -1px hsl(0 0% 0% / 0.10);
   --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
+  --brand: hsl(266 100% 50%);
+  --brand-foreground: hsl(270 100% 98%);
 }
 
 .dark {
@@ -146,6 +162,8 @@
   --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 4px 6px -1px hsl(0 0% 0% / 0.10);
   --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 8px 10px -1px hsl(0 0% 0% / 0.10);
   --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
+  --brand: hsl(266 70% 60%);
+  --brand-foreground: hsl(270 100% 98%);
 }
 
 @layer base {

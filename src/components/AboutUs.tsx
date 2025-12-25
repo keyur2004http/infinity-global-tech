@@ -1,5 +1,4 @@
 "use client"
-
 import type React from "react"
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react"
@@ -21,9 +20,8 @@ import {
   CheckCircle,
 } from "lucide-react"
 import { motion, useScroll, useTransform, useInView, useSpring, Variants } from "framer-motion"
-import { HeroNavBar } from "./navbar "
-import Footer from "./footer";
-import { TestimonialCarousel } from "./profile-card-testimonial-carousel";
+import { TestimonialCarousel } from "./ui/team-member-card";
+
 
 export default function AboutUsSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -66,58 +64,57 @@ export default function AboutUsSection() {
     },
   }
   
-  
-
   const services = [
     {
-      icon: <Search className="w-6 h-6" />,
-      secondaryIcon: <Sparkles className="w-4 h-4 absolute -top-1 -right-1 text-[#A9BBC8]" />,
-      title: "SEO Strategy",
+      icon: <Code className="w-6 h-6" />,
+      secondaryIcon: <Sparkles className="w-4 h-4 absolute -top-1 -right-1 text-cyan-800" />,
+      title: "Web Development",
       description:
-        "Boost your online visibility with our expert SEO strategies. We optimize your website to rank higher, drive organic traffic, and attract the right audience.",
+        "We build fast, modern, and easy-to-use websites that help your business grow. From simple pages to full websites, we make sure everything looks great and works smoothly.",
       position: "left",
     },
     {
       icon: <Megaphone className="w-6 h-6" />,
       secondaryIcon: <CheckCircle className="w-4 h-4 absolute -top-1 -right-1 text-[#A9BBC8]" />,
-      title: "Social Media",
+      title: "Ad Campaigns (Meta & WhatsApp)",
       description:
-        "Connect with your customers and grow your brand on social media. We create engaging content and manage campaigns to build a strong online community.",
+        "We run smart ad campaigns on Facebook, Instagram, and WhatsApp to reach the right people, get more leads, and increase sales without wasting your budget.",
       position: "left",
     },
     {
-      icon: <BarChart2 className="w-6 h-6" />,
+      icon: <Search className="w-6 h-6" />,
       secondaryIcon: <Star className="w-4 h-4 absolute -top-1 -right-1 text-[#A9BBC8]" />,
-      title: "Data Analytics",
+      title: "SEO",
       description:
-        "Our data-driven approach helps you understand your audience better. We analyze key metrics to refine your strategy and maximize ROI.",
+        "We help your website show up on Google when people search for your services. Better rankings mean more visitors and more customers for your business.",
       position: "left",
-    },
-    {
-      icon: <Code className="w-6 h-6" />,
-      secondaryIcon: <Sparkles className="w-4 h-4 absolute -top-1 -right-1 text-[#A9BBC8]" />,
-      title: "Web Development",
-      description:
-        "Build a stunning and functional website that serves as your digital storefront. Our team designs and develops user-friendly sites tailored to your needs.",
-      position: "right",
     },
     {
       icon: <Globe className="w-6 h-6" />,
-      secondaryIcon: <CheckCircle className="w-4 h-4 absolute -top-1 -right-1 text-[#A9BBC8]" />,
-      title: "Content Marketing",
+      secondaryIcon: <Sparkles className="w-4 h-4 absolute -top-1 -right-1 text-[#A9BBC8]" />,
+      title: "Social Media Marketing",
       description:
-        "Engage your audience with valuable content. We craft compelling blog posts, articles, and videos to establish your brand as an industry leader.",
+        "We manage your social media pages and post engaging content that connects with your audience, builds trust, and grows your brand online.",
       position: "right",
     },
     {
       icon: <Layout className="w-6 h-6" />,
-      secondaryIcon: <Star className="w-4 h-4 absolute -top-1 -right-1 text-[#A9BBC8]" />,
-      title: "Email Campaigns",
+      secondaryIcon: <CheckCircle className="w-4 h-4 absolute -top-1 -right-1 text-[#A9BBC8]" />,
+      title: "Content Creation",
       description:
-        "Reach your customers directly with targeted email campaigns. We design and manage effective email marketing funnels to nurture leads and drive conversions.",
+        "We create eye-catching posts, captions, reels, and graphics that tell your brand story and keep your audience interested and engaged.",
       position: "right",
     },
-  ]
+    {
+      icon: <BarChart2 className="w-6 h-6" />,
+      secondaryIcon: <Star className="w-4 h-4 absolute -top-1 -right-1 text-[#A9BBC8]" />,
+      title: "Branding (Logo & Cards)",
+      description:
+        "We design professional logos, visiting cards, and brand materials that give your business a strong and memorable identity.",
+      position: "right",
+    },
+  ];
+  
 
   const stats = [
     { icon: <Award />, value: 150, label: "Projects Completed", suffix: "+" },
@@ -128,11 +125,12 @@ export default function AboutUsSection() {
 
   return (
     <>
-    <HeroNavBar></HeroNavBar>
+    
     <section
       id="about-section"
       ref={sectionRef}
-      className="w-full py-10 lg:py-35 px-4 bg-gradient-to-b from-[#F2F2EB] to-[#F8F8F2] text-[#202e44] overflow-hidden relative"
+      className="w-full py-10 lg:py-35 px-4  bg-gradient-to-b from-white via-blue-400/10  to-blue-400/10 
+      md:bg-gradient-to-bl md:from-[#f5ecff] md:via-[#f1e7ff] md:to-white text-[#202e44] overflow-hidden relative "
     >
       <motion.div
         className="absolute top-20 left-10 w-64 h-64 rounded-full bg-[#304068]/5 blur-3xl"
@@ -169,7 +167,7 @@ export default function AboutUsSection() {
       />
 
       <motion.div
-        className="container mx-auto max-w-6xl relative z-10"
+        className="container mx-auto max-w-6xl relative z-10 mt-20 sm:mt-10 lg:mt-10"
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         variants={containerVariants}
@@ -184,7 +182,7 @@ export default function AboutUsSection() {
             <Zap className="w-4 h-4" />
             DISCOVER OUR STORY
           </motion.span>
-          <h2 className="text-4xl md:text-5xl font-light mb-4 text-center">About Us</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">About Us</h2>
           <motion.div
             className="w-24 h-1 bg-[#304068]"
             initial={{ width: 0 }}
@@ -298,7 +296,8 @@ export default function AboutUsSection() {
             </motion.div>
           </div>
 
-          <div className="space-y-16">
+          <div id="service"
+          className="space-y-16">
             {services
               .filter((service) => service.position === "right")
               .map((service, index) => (
@@ -315,7 +314,7 @@ export default function AboutUsSection() {
           </div>
         </div>
 
-        <motion.div
+        {/* <motion.div
           ref={statsRef}
           className="mt-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
           initial="hidden"
@@ -332,9 +331,9 @@ export default function AboutUsSection() {
               delay={index * 0.1}
             />
           ))}
-        </motion.div>
+        </motion.div> */}
 
-        <motion.div
+        {/* <motion.div
           className="mt-20 bg-[#202e44] text-white p-8 rounded-xl flex flex-col md:flex-row items-center justify-between gap-6"
           initial={{ opacity: 0, y: 30 }}
           animate={isStatsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -353,12 +352,11 @@ export default function AboutUsSection() {
             Get Started <ArrowRight className="w-4 h-4" />
           </motion.button>
           </Link>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
-      <TestimonialCarousel/>
+     <TestimonialCarousel></TestimonialCarousel>
+     
     </section>
-    
-    <Footer/>
     
     </>
   )
@@ -398,7 +396,7 @@ function ServiceItem({ icon, secondaryIcon, title, description, delay, direction
         transition={{ duration: 0.6, delay: delay + 0.2 }}
       >
         <motion.div
-          className="text-[#304068] bg-[#304068]/10 p-3 rounded-lg transition-colors duration-300 group-hover:bg-[#304068]/20 relative"
+          className="text-white bg-cyan-700 p-3 rounded-lg transition-colors duration-300 group-hover:bg-[#304068]/20 relative"
           whileHover={{ rotate: [0, -10, 10, -5, 0], transition: { duration: 0.5 } }}
         >
           {icon}
@@ -474,7 +472,7 @@ function StatCounter({ icon, value, label, suffix, delay }: StatCounterProps) {
       whileHover={{ y: -5, transition: { duration: 0.2 } }}
     >
       <motion.div
-        className="w-14 h-14 rounded-full bg-[#202e44]/5 flex items-center justify-center mb-4 text-[#304068] group-hover:bg-[#304068]/10 transition-colors duration-300"
+        className="w-14 h-14 rounded-full bg-cyan-700 flex items-center justify-center mb-4 text-gray-300 group-hover:bg-cyan-900/70 transition-colors duration-300"
         whileHover={{ rotate: 360, transition: { duration: 0.8 } }}
       >
         {icon}

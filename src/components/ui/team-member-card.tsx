@@ -4,8 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Github,
-  Twitter,
+  Instagram,
   Youtube,
   Linkedin,
   Facebook,
@@ -19,8 +18,8 @@ interface Testimonial {
   title: string;
   description: string;
   imageUrl: string;
-  githubUrl?: string;
-  twitterUrl?: string;
+  instagramUrl?:string;
+  facebookUrl?:string;
   youtubeUrl?: string;
   linkedinUrl?: string;
 }
@@ -33,22 +32,20 @@ const testimonials: Testimonial[] = [
       "Built Infinity Global Tech as a virtual-first agency, driven by innovation and client growth.",
     imageUrl:
       "/Assets/st-lathiya.png",
-    githubUrl: "https://www.facebook.com/share/16LFG7iTHj/",
-    twitterUrl: "https://x.com/LathiyaSatyam?t=J_S4p3PdHbNvOzxMYmik6A&s=09",
-    youtubeUrl: "#",
+      instagramUrl:"https://www.instagram.com/royal_satyaa_009/",
+      facebookUrl:"https://www.facebook.com/profile.php?id=100086973196994&rdid=nON4zTAEMoKyNFh4&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16LFG7iTHj%2F#",
     linkedinUrl: "https://www.linkedin.com/in/satyam-lathiya-ba7960264?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
     name: "Keyur Kidecha",
     title: "Co-Founder,Infinity Global",
     description:
-      "Passionate about digital strategies, shaping a global team without physical limits.3",
+      "Passionate about digital strategies, shaping a global team without physical limits.",
     imageUrl:
-      "",
-    githubUrl: "#",
-    twitterUrl: "#",
-    youtubeUrl: "#",
-    linkedinUrl: "#",
+      "/Assets/keyur.png",
+      instagramUrl:"https://www.instagram.com/keyur.kidecha/",
+      facebookUrl:"https://www.instagram.com/keyur.kidecha/",
+    linkedinUrl: "https://www.linkedin.com/in/keyur-kidecha-28869234a/",
   }]
 
 export interface TestimonialCarouselProps {
@@ -68,18 +65,18 @@ export function TestimonialCarousel({ className }: TestimonialCarouselProps) {
   const currentTestimonial = testimonials[currentIndex];
 
   const socialIcons = [
-    { icon: Facebook, url: currentTestimonial.githubUrl, label: "Facebook" },
-    { icon: Twitter, url: currentTestimonial.twitterUrl, label: "Twitter" },
-    { icon: Youtube, url: currentTestimonial.youtubeUrl, label: "YouTube" },
+    { icon: Facebook, url: currentTestimonial.facebookUrl, label: "Facebook" },
+    { icon: Instagram, url: currentTestimonial.instagramUrl, label: "Instagram" },
     { icon: Linkedin, url: currentTestimonial.linkedinUrl, label: "LinkedIn" },
   ];
 
   return (
-    <div className={cn("w-full max-w-5xl mx-auto px-4 mt-10", className)}>
-      {/* Desktop layout */}
+    <div className={cn("w-full max-w-5xl mx-auto px-4 mt-30 mb-20", className)}>
+     
       <div className='hidden md:flex relative items-center'>
         {/* Avatar */}
-        <div className='w-[470px] h-[470px] rounded-3xl overflow-hidden bg-gray-200 dark:bg-neutral-800 flex-shrink-0'>
+        <div className='w-[470px] h-[470px] rounded-3xl overflow-hidden  bg-gradient-to-b from-white via-blue-400/10  to-blue-400/10 
+    md:bg-gradient-to-bl md:from-[#f5ecff] md:via-[#f1e7ff] md:to-white flex-shrink-0'>
           <AnimatePresence mode='wait'>
             <motion.div
               key={currentTestimonial.imageUrl}
@@ -103,7 +100,7 @@ export function TestimonialCarousel({ className }: TestimonialCarouselProps) {
         </div>
 
         {/* Card */}
-        <div className='bg-white dark:bg-card rounded-3xl shadow-2xl p-8 ml-[-80px] z-10 max-w-xl flex-1'>
+        <div className='bg-white  rounded-3xl shadow-2xl p-8 ml-[-80px] z-10 max-w-xl flex-1'>
           <AnimatePresence mode='wait'>
             <motion.div
               key={currentTestimonial.name}
@@ -126,14 +123,14 @@ export function TestimonialCarousel({ className }: TestimonialCarouselProps) {
                 {currentTestimonial.description}
               </p>
 
-              <div className='flex space-x-4'>
+              <div className='flex space-x-4 '>
                 {socialIcons.map(({ icon: IconComponent, url, label }) => (
                   <Link
                     key={label}
                     href={url || "#"}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='w-12 h-12 bg-gray-900 dark:bg-gray-100 rounded-full flex items-center justify-center transition-colors hover:bg-gray-800 dark:hover:bg-gray-200 hover:scale-105 cursor-pointer'
+                    className='w-12 h-12 bg-cyan-900 dark:bg-gray-100 rounded-full flex items-center justify-center transition-colors hover:bg-gray-800 dark:hover:bg-gray-200 hover:scale-105 cursor-pointer'
                     aria-label={label}
                   >
                     <IconComponent className='w-5 h-5 text-white dark:text-gray-900' />
@@ -193,17 +190,17 @@ export function TestimonialCarousel({ className }: TestimonialCarouselProps) {
                 {currentTestimonial.description}
               </p>
               
-              <div className='flex justify-center space-x-4'>
+              <div className='flex justify-center space-x-4 relative z-20 '>
                 {socialIcons.map(({ icon: IconComponent, url, label }) => (
                   <Link
                     key={label}
                     href={url || "#"}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='w-12 h-12 bg-gray-900 dark:bg-gray-100 rounded-full flex items-center justify-center transition-colors hover:bg-gray-800 dark:hover:bg-gray-200 cursor-pointer'
+                    className='w-12 h-12 bg-cyan-900/10 rounded-full flex items-center justify-center transition-colors  cursor-pointer'
                     aria-label={label}
                   >
-                    <IconComponent className='w-5 h-5 text-white dark:text-gray-900' />
+                    <IconComponent className='w-5 h-5 text-cyan-950' />
                   </Link>
                 ))}
               </div>
@@ -213,14 +210,14 @@ export function TestimonialCarousel({ className }: TestimonialCarouselProps) {
       </div>
 
       {/* Bottom navigation */}
-      <div className='flex justify-center items-center gap-6 mt-8'>
+      <div className='flex justify-center items-center gap-6 mt-8 relative z-20'>
         {/* Previous */}
         <button
           onClick={handlePrevious}
           aria-label='Previous testimonial'
-          className='w-12 h-12 rounded-full bg-gray-100 dark:bg-card border border-gray-300 dark:border-card/40 shadow-md flex items-center justify-center hover:bg-gray-200 dark:hover:bg-card/80 transition-colors cursor-pointer'
+          className='w-12 h-12 rounded-full bg-cyan-900 shadow-md flex items-center  justify-center hover:bg-gray-700 dark:hover:bg-card/80 transition-colors cursor-pointer'
         >
-          <ChevronLeft className='w-6 h-6 text-gray-700 dark:text-gray-50' />
+          <ChevronLeft className='w-6 h-6 text-white ' />
         </button>
 
         {/* Dots */}
@@ -244,9 +241,9 @@ export function TestimonialCarousel({ className }: TestimonialCarouselProps) {
         <button
           onClick={handleNext}
           aria-label='Next testimonial'
-          className='w-12 h-12 rounded-full bg-gray-100 dark:bg-card border border-gray-300 dark:border-card/40 shadow-md flex items-center justify-center hover:bg-gray-200 dark:hover:bg-card/80 transition-colors cursor-pointer'
+          className='w-12 h-12 rounded-full bg-cyan-900 shadow-md flex items-center justify-center hover:bg-gray-700 dark:hover:bg-card/80 transition-colors cursor-pointer'
         >
-          <ChevronRight className='w-6 h-6 text-gray-700 dark:text-gray-50' />
+          <ChevronRight className='w-6 h-6 text-white' />
         </button>
       </div>
     </div>
