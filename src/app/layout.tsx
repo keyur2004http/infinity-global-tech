@@ -15,7 +15,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "INFINITY GLOBAL TECH",
   description: "Professional Digital solutions and IT Service.",
+  verification: {
+    google: "v5Z6dW_UNRHSjvWXE9XLTQ4arzwuH-GWwXpMOYCy8Tk",
+  },
 };
+
 
 export default function RootLayout({
   children,
