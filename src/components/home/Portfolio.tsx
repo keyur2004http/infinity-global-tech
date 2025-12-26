@@ -62,7 +62,7 @@ const services: Service[] = [
     id: "business-card",
     title: "Card Design",
     subtitle: "Professional & premium card designs",
-    image: "/Assets/portfolio/Business-Card/coffee-card.png",
+    image: "/Assets/portfolio/Business-Card/covers.png",
     modalItems: [
       {
         title: "Reese Miller Card",
